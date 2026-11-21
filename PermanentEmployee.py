@@ -1,12 +1,12 @@
-from Employee import Employee
+from Employee import Employee                                  #Importing Paarentclass to Childclass
 
 
 class PermanentEmployee(Employee):
-    def __init__(self, name, id, role, salary):
+    def __init__(self, name, id, role, salary):             #super used for to get Parentkeywords
         super().__init__(name, id, role, salary)
 
 
-    def calculate_salary(self):
+    def calculate_salary(self):                             
         allowance=self.salary+(self.salary*(0.2))
         print(f"{self.name} Total salary is {allowance}")
 
